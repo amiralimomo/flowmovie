@@ -1,0 +1,24 @@
+.genre-body{
+    /* display: none; */
+
+  
+}
+.d-none{
+    display: none;
+    /* position: absolute;
+    left: 0;
+    right: 0;
+    top: 82px;
+    background-color: rgb(145, 145, 145);
+   
+    height: 200px; */
+}
+.d-block{
+    position: absolute;
+   width: fit-content;
+    display: block;
+    top: 82px;
+    background-color: rgb(145, 145, 145);
+   transition: top .5s linear;
+    height: 200px;
+}
