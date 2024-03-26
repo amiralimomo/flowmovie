@@ -13,7 +13,7 @@ export const Header = () => {
         } else {
             setHover(true)
         }
-        console.log(hover)
+       
     }
     return (
         <header className="header d-flex justify-content-around" >
@@ -21,10 +21,10 @@ export const Header = () => {
                 <div><img className="header-logo" src={logo} alt="logo" /></div>
                 <ul className="d-flex justify-content-start align-items-stretch header-ul">
                     <li className="d-flex justify-content-center align-items-center header-li"><a className="d-flex justify-content-center align-items-center header-li header-a" href="/">Home</a> </li>
-                    <li className="d-flex justify-content-center align-items-center header-li"><a onMouseEnter={() => onHandleHover()} onMouseLeave={() => onHandleHover()} className="d-flex justify-content-center align-items-center header-li header-a" href="/">Movies      <div className={hover ? "d-block trans" : "d-none"} style={{}}>
+                    <li className="d-flex justify-content-center align-items-center header-li"><span onMouseEnter={() => onHandleHover()} onMouseLeave={() => onHandleHover()} className="d-flex justify-content-center align-items-center header-li header-a" href="/">Movies      <div className={hover ? "d-block trans" : "d-none"} style={{}}>
                 <Genre />
 
-            </div></a>  <i class="bi bi-chevron-down header-link-icon"></i></li>
+            </div></span>  <i className="bi bi-chevron-down header-link-icon"></i></li>
                     <li className="d-flex justify-content-center align-items-center header-li"><a className="d-flex justify-content-center align-items-center header-li header-a" href="/">About</a> </li>
                 </ul>
             </div>
