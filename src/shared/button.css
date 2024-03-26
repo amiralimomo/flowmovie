@@ -1,0 +1,24 @@
+.active-button{
+    margin-top: 10px;
+    border: none!important;
+    background-color: #0fade7;
+    color: white;
+    padding: 14px 45px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+.active-button:hover{
+    background-color: #0F9ED1;
+    transition: all .3s ease-in-out;
+}
+.passive-button{
+    margin-top: 10px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    padding: 13px 44px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
