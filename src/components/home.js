@@ -1,3 +1,9 @@
+
+import { Carousel } from "./carousel";
 export const Home=()=>{
-    return <div>Home</div>
+    return (
+        <session>
+            <Carousel/>
+        </session>
+    )
 }
