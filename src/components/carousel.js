@@ -73,11 +73,6 @@ export const Carousel = () => {
                             <PassiveButton name="+playlist"/>
                             </div></div>
                 </SwiperSlide>
-
-
-
-
-                ...
             </Swiper>
         </React.Fragment>
     )

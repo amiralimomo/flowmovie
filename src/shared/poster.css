@@ -1,0 +1,31 @@
+.poster-body{
+margin: 20px;
+}
+.poster-a:hover{
+
+}
+.poster-img{
+    width: 135px;
+}
+.poster-detail{
+    color: white;
+}
+.poster-detail>span{
+font-size: 12px;
+padding: 8px 0;
+  display: inline-block;
+}
+.poster-detail>a{
+    color: white;
+}
+.poster-detail>a>h3{
+font-size: 15px;
+text-transform: capitalize;
+font-weight: 600;
+text-overflow: ellipsis;
+max-width: 130px;
+display: block;
+height: 32px;
+white-space: nowrap;
+overflow: hidden;
+}
