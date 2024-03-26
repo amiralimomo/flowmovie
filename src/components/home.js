@@ -1,11 +1,19 @@
 
 import { Carousel } from "./carousel";
 import { TopRatedMovies } from "./topratedmovies";
+import {ImdbMovies} from './imdbmovies';
+import {useList} from "../hooks/getMoviesDataList";
+
 export const Home=()=>{
+    const [movies,imdbMovies,getList]=useList();
+   
+  
+
     return (
-        <session>
+        <section>
             <Carousel/>
-            <TopRatedMovies/>
-        </session>
+            <TopRatedMovies list={movies}/>
+            <ImdbMovies  list={imdbMovies}/>
+        </section>
     )
 }

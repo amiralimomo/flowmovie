@@ -1,5 +1,5 @@
 import "./poster.css";
-import posterImage from "../images/tt0468569_poster.jpg";
+// import posterImage from "../images/tt0468569_poster.jpg";
 export const Poster = (props) => {
     return (
         <div key={props.id} className="poster-body">

@@ -1,0 +1,20 @@
+.imdb-body{
+    background-image: url("../images/wide.jpg");
+    height: 665px;
+}
+.imdb-detail{
+    color: white;
+    width: auto;
+    padding: 70px;
+    text-align: center;
+}
+.imdb-detail>h2{
+   font-size: 50px;
+   font-weight: 700;
+}
+.imdb-detail>span{
+    display: block;
+    font-size: 30px;
+    max-width: 390px;
+    margin: 0 auto;
+}
