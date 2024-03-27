@@ -1,7 +1,26 @@
 .footer{
    background-color: #131722;
 }
+.footer-top{
+    border-bottom: .5px solid rgb(168, 168, 168);
+}
 .footer-logo{
     width: 150px;
   height: 82px;
+}
+.link-intop-footer{
+    color: rgb(204, 204, 204);
+    padding: 10px;
+    margin-right: 10px;
+    transition: all .2s ease-in-out;
+}
+.link-intop-footer:hover{
+    color: white;
+}
+.link-intop-footer>i{
+    font-size: 18px;
+}
+.link-intop-footer>span{
+    padding-left: 5px;
+    font-size: 14px;
 }
