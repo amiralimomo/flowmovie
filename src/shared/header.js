@@ -15,7 +15,7 @@ export const Header = (props) => {
     }
     return (
         <header className="header " >
-            <div className='header-child d-flex justify-content-around container'>
+            <div className='header-child d-flex justify-content-between container'>
 
 
                 <div className="d-flex justify-content-start">
