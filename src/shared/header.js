@@ -6,13 +6,11 @@ import { useState } from 'react';
 export const Header = (props) => {
     const [hover, setHover] = useState(false)
 
-    const onHandleHover = () => {
-        if (hover) {
-            setHover(false)
+    const onHandleHover = (prop) => {
+    
+            setHover(prop)
 
-        } else {
-            setHover(true)
-        }
+       
 
     }
     return (
@@ -24,7 +22,7 @@ export const Header = (props) => {
                     <div><img className="header-logo" src={logo} alt="logo" /></div>
                     <ul className="d-flex justify-content-start align-items-stretch header-ul">
                         <li className="d-flex justify-content-center align-items-center header-li"><a className="d-flex justify-content-center align-items-center header-li header-a" href="/">Home</a> </li>
-                        <li className="d-flex justify-content-center align-items-center header-li"><span onMouseEnter={() => onHandleHover()} onMouseLeave={() => onHandleHover()} className="d-flex justify-content-center align-items-center header-li header-a" href="/">Movies      <div className={hover ? "d-block trans" : "d-none"} style={{}}>
+                        <li className="d-flex justify-content-center align-items-center header-li"><span onMouseEnter={() => onHandleHover(true)} onMouseLeave={() => onHandleHover(false)} className="d-flex justify-content-center align-items-center header-li header-a" href="/">Movies      <div className={hover ? "d-block trans" : "d-none"} style={{}}>
                             <Genre genre={props.genre}/>
 
                         </div></span>  <i className="bi bi-chevron-down header-link-icon"></i></li>
