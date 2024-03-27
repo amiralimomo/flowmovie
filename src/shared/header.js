@@ -3,7 +3,7 @@ import logo from '../images/fmovie-high-resolution-logo_prev_ui.png';
 import { Genre } from "./genre.js";
 import search from '../images/icons/icons8-search-50.png';
 import { useState } from 'react';
-export const Header = () => {
+export const Header = (props) => {
     const [hover, setHover] = useState(false)
 
     const onHandleHover = () => {
@@ -25,7 +25,7 @@ export const Header = () => {
                     <ul className="d-flex justify-content-start align-items-stretch header-ul">
                         <li className="d-flex justify-content-center align-items-center header-li"><a className="d-flex justify-content-center align-items-center header-li header-a" href="/">Home</a> </li>
                         <li className="d-flex justify-content-center align-items-center header-li"><span onMouseEnter={() => onHandleHover()} onMouseLeave={() => onHandleHover()} className="d-flex justify-content-center align-items-center header-li header-a" href="/">Movies      <div className={hover ? "d-block trans" : "d-none"} style={{}}>
-                            <Genre />
+                            <Genre genre={props.genre}/>
 
                         </div></span>  <i className="bi bi-chevron-down header-link-icon"></i></li>
                         <li className="d-flex justify-content-center align-items-center header-li"><a className="d-flex justify-content-center align-items-center header-li header-a" href="/">About</a> </li>
