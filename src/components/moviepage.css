@@ -1,0 +1,41 @@
+.movie-page-body {
+  min-height: 100vh;
+  background-color: #131722;
+  color: white;
+  max-width: 100vm;
+}
+.poster-img {
+  position: relative;
+  width: 370px;
+}
+.movie {
+  justify-content: start;
+  width: 100%;
+  height: fit-content;
+}
+
+.movie-detail > h1 {
+  font-size: 25px;
+  font-weight: 700;
+}
+.line{
+    border-bottom: 1px solid gray;
+}
+
+.movie-detail>span{
+
+    font-size: 15px;
+    padding-right: 7px;
+}
+.raiting-span{
+    font-size: 13px;  
+}
+.imdb-img{
+    width: 35px;
+}
+.discription{
+    font-size:17px ;
+}
+.director{
+    font-size:17px ;  
+}

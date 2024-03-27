@@ -5,6 +5,7 @@ import {Home} from './components/home';
 import { Header } from "./shared/header";
 import { Footer } from "./shared/footer";
 import {useGenre}from "./hooks/getGenreDataList";
+import { MoviePage } from "./components/moviepage";
 function App() {
   const [genre, getGenre] = useGenre();
     useEffect(() => {
@@ -17,6 +18,7 @@ function App() {
     <Header genre={genre}/>
     <Routes>
       <Route path="/" element={<Home/>}/>
+      <Route path="/movie" element={<MoviePage/>}/>
     </Routes>
     <Footer genre={genre}/>
    </Router>

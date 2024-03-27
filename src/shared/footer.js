@@ -1,6 +1,7 @@
 import "./footer.css";
 import logo from "../images/fmovie-high-resolution-logo_prev_ui.png";
 import { Genre } from "./genre";
+
 export const Footer = (props) => {
     return (<footer className=" footer">
         <div className="container">
@@ -26,8 +27,9 @@ export const Footer = (props) => {
                     </a>
                 </div>
             </div>
-            <div>
+            <div className="pt-3 pb-3">
                 <Genre mod={true} genre={props.genre}/>
+               
             </div>
         </div>
     </footer>)
