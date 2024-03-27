@@ -3,6 +3,7 @@ import React from "react";
 import { BrowserRouter as Router ,Routes,Route } from "react-router-dom";
 import {Home} from './components/home';
 import { Header } from "./shared/header";
+import { Footer } from "./shared/footer";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home/>}/>
     </Routes>
+    <Footer/>
    </Router>
   </React.Fragment>
   );
