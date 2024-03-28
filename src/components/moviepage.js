@@ -1,45 +1,67 @@
 import "./moviepage.css";
 import poster from "../images/tt0468569_poster.jpg";
 import imdbimg from "../images/icons8-imdb-48.png";
+import wideposter from "../images/d1.jpg";
+import wideposter2 from "../images/d2.jpg";
+import wideposter3 from "../images/d3.jpg";
+
+import { useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useMovie } from "../hooks/getMovieData";
 export const MoviePage = (props) => {
+
+    const location = useLocation();
+    const [movie, getMovie] = useMovie();
+    useEffect(() => {
+
+        getMovie();
+
+    }, [])
+
     return (
         <section className="movie-page-body">
             <div className="container pt-5 pb-5">
                 <div className="d-flex justify-content-start">
                     <div>
-                        <img className="poster-img" src={poster} alt="" />
+                        <img className="movie-poster-img" src={poster} alt="" />
                     </div>
                     <div className="movie ms-3">
-                        <h1>The Dark Knight</h1>
+                        {/* <h1>The Dark Knight</h1> */}
+                        <h1>{movie.title}</h1>
                         <div className="movie-detail pt-2">
 
-                            <span className="movie-year">1999</span><span >|</span>
-                            <span className="movie-year">dram ,action</span><span >|</span>
-                            <span className="movie-year">usa</span>
+                            <span className="movie-year">{movie.year}</span><span >|</span>
+                            {/* <span className="movie-year">{movie.genres.map((item)=>{return <span>item</span>})}</span><span >|</span> */}
+                            <span className="movie-year">{movie.country}</span>
                         </div>
                         <div className="raiting pb-3  line">
                             <div className="d-flex align-items-center">
                                 <img className="imdb-img" src={imdbimg} alt="" />
-                                <span className="ps-2 raiting-span">9.1</span>
+                                <span className="ps-2 raiting-span">{movie.imdb_rating}</span>
 
                             </div>
                             <div className="d-flex align-items-center">
                                 <i class="bi bi-alarm"></i>
-                                <span className="ps-2 raiting-span">1h 40min</span>
+                                <span className="ps-2 raiting-span">{movie.runtime}</span>
 
                             </div>
                         </div>
                         <div className="pt-3 line">
-                            <p className="discription">When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.</p>
+                            <p className="discription">{movie.plot}</p>
                         </div>
                         <div className="pt-3 director">
-                            <span>Directors:</span>  <span>Christopher Nolan</span>
+                            <span>Directors:</span>  <span>{movie.director}</span>
                         </div>
                         <div className="pt-3 director">
-                            <span>Actors:</span>  <span>Jonathan Nolan (screenplay), Christopher Nolan (screenplay), Christopher Nolan (story), David S. Goyer (story), Bob Kane (characters)</span>
+                            <span>Actors:</span>  <span>{movie.actors}</span>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="d-flex justify-content-center">
+                {/* <img className="more-movie-img  m-2" src={movie?.images[0]} alt="" />
+                <img className="more-movie-img  m-2" src={movie.images[1]} alt="" />
+                <img className="more-movie-img  m-2" src={movie.images[2]} alt="" /> */}
             </div>
         </section>
     )

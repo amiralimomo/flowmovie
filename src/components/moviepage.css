@@ -4,7 +4,7 @@
   color: white;
   max-width: 100vm;
 }
-.poster-img {
+.movie-poster-img {
   position: relative;
   width: 370px;
 }
@@ -38,4 +38,8 @@
 }
 .director{
     font-size:17px ;  
+}
+.more-movie-img{
+  max-width: 200px!important;
+  
 }

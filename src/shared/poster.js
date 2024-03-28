@@ -1,6 +1,8 @@
 import "./poster.css";
+import { useNavigate } from "react-router-dom";
 // import posterImage from "../images/tt0468569_poster.jpg";
 export const Poster = (props) => {
+    let navigate=useNavigate();
     return (
         // <div key={props.id} classNameName="poster-body ">
 
@@ -16,7 +18,7 @@ export const Poster = (props) => {
         //     </div>
         // </div>
 
-        <div key={props.id} className="c-container noselect">
+        <div onClick={()=>{navigate("/movie",{state:{id:props.id}})}} key={props.id} className="c-container noselect">
             <div className="canvas">
                 <div className="tracker tr-1"></div>
                 <div className="tracker tr-2"></div>
