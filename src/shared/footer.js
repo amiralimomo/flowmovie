@@ -10,19 +10,19 @@ export const Footer = (props) => {
                 <div> <img className="footer-logo" src={logo} alt="" /></div>
                 <div className="d-flex justify-content-end align-items-center">
                     <a className="link-intop-footer" href="">
-                        <i class="bi bi-twitter"></i>
+                        <i className="bi bi-twitter"></i>
                         <span>twiter</span>
                     </a>
                     <a className="link-intop-footer" href="">
-                        <i class="bi bi-instagram"></i>
+                        <i className="bi bi-instagram"></i>
                         <span>instagram</span>
                     </a>
                     <a className="link-intop-footer" href="">
-                        <i class="bi bi-whatsapp"></i>
+                        <i className="bi bi-whatsapp"></i>
                         <span>whatsapp</span>
                     </a>
                     <a className="link-intop-footer" href="">
-                        <i class="bi bi-telephone-fill"></i>
+                        <i className="bi bi-telephone-fill"></i>
                         <span>phone</span>
                     </a>
                 </div>

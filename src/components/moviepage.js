@@ -8,13 +8,13 @@ import wideposter3 from "../images/d3.jpg";
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useMovie } from "../hooks/getMovieData";
-export const MoviePage = (props) => {
+export const MoviePage = () => {
 
     const location = useLocation();
     const [movie, getMovie] = useMovie();
     useEffect(() => {
 
-        getMovie();
+        getMovie(location.state.id);
 
     }, [])
 
@@ -23,7 +23,7 @@ export const MoviePage = (props) => {
             <div className="container pt-5 pb-5">
                 <div className="d-flex justify-content-start">
                     <div>
-                        <img className="movie-poster-img" src={poster} alt="" />
+                        <img className="movie-poster-img" src={movie.poster} alt="" />
                     </div>
                     <div className="movie ms-3">
                         {/* <h1>The Dark Knight</h1> */}
@@ -41,7 +41,7 @@ export const MoviePage = (props) => {
 
                             </div>
                             <div className="d-flex align-items-center">
-                                <i class="bi bi-alarm"></i>
+                                <i className="bi bi-alarm"></i>
                                 <span className="ps-2 raiting-span">{movie.runtime}</span>
 
                             </div>
