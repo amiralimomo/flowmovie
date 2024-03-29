@@ -31,7 +31,7 @@ export const MoviePage = () => {
                         <div className="movie-detail pt-2">
 
                             <span className="movie-year">{movie.year}</span><span >|</span>
-                            {/* <span className="movie-year">{movie.genres.map((item)=>{return <span>item</span>})}</span><span >|</span> */}
+                            <span className="movie-year">{movie.genres?.map((item,ind)=>{return <span className="pe-1" key={ind}>{item}</span>})}</span><span >|</span>
                             <span className="movie-year">{movie.country}</span>
                         </div>
                         <div className="raiting pb-3  line">
@@ -59,9 +59,8 @@ export const MoviePage = () => {
                 </div>
             </div>
             <div className="d-flex justify-content-center">
-                {/* <img className="more-movie-img  m-2" src={movie?.images[0]} alt="" />
-                <img className="more-movie-img  m-2" src={movie.images[1]} alt="" />
-                <img className="more-movie-img  m-2" src={movie.images[2]} alt="" /> */}
+                {movie.images?.map((item,ind)=>{return( <img key={ind} className="more-movie-img  m-2" src={item} alt="" />)})}
+          
             </div>
         </section>
     )
