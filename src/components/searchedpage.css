@@ -1,0 +1,9 @@
+.searched-body{
+background-color: #131722;
+min-height: 90vh;
+color: white;
+}
+.searched-title{
+    padding-top: 20px;
+    font-size: 28px;
+}
