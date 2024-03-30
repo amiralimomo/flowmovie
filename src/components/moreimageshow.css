@@ -1,0 +1,25 @@
+.more-image-parent {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #1317225e;
+}
+.more-movie-img-active {
+  display: block;
+  width: 100% !important;
+}
+.d-active {
+  display: block;
+}
+.d-notactive {
+  display: none;
+}
+.btn-close {
+  right: 0;
+  position: absolute;
+  top: 0;
+  z-index: 20;
+  background-color: antiquewhite!important;
+}

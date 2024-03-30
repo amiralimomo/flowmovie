@@ -1,17 +1,19 @@
 import "./moviepage.css";
 import poster from "../images/tt0468569_poster.jpg";
 import imdbimg from "../images/icons8-imdb-48.png";
-import wideposter from "../images/d1.jpg";
-import wideposter2 from "../images/d2.jpg";
-import wideposter3 from "../images/d3.jpg";
-
+// import wideposter from "../images/d1.jpg";
+// import wideposter2 from "../images/d2.jpg";
+// import wideposter3 from "../images/d3.jpg";
+import { ImageSlider } from "./moreimageshow";
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useMovie } from "../hooks/getMovieData";
+
 export const MoviePage = () => {
 
     const location = useLocation();
     const [movie, getMovie] = useMovie();
+  
     useEffect(() => {
 
         getMovie(location.state.id);
@@ -31,7 +33,7 @@ export const MoviePage = () => {
                         <div className="movie-detail pt-2">
 
                             <span className="movie-year">{movie.year}</span><span >|</span>
-                            <span className="movie-year">{movie.genres?.map((item,ind)=>{return <span className="pe-1" key={ind}>{item}</span>})}</span><span >|</span>
+                            <span className="movie-year">{movie.genres?.map((item, ind) => { return <span className="pe-1" key={ind}>{item}</span> })}</span><span >|</span>
                             <span className="movie-year">{movie.country}</span>
                         </div>
                         <div className="raiting pb-3  line">
@@ -58,10 +60,8 @@ export const MoviePage = () => {
                     </div>
                 </div>
             </div>
-            <div className="d-flex justify-content-center">
-                {movie.images?.map((item,ind)=>{return( <img key={ind} className="more-movie-img  m-2" src={item} alt="" />)})}
+                <ImageSlider images={movie.images} />
           
-            </div>
         </section>
     )
 }
