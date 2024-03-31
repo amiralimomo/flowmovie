@@ -9,11 +9,11 @@ export const Header = (props) => {
     const [searchInput, setSearchInput] = useState("")
     let navigate = useNavigate();
     const onHandleHover = (prop) => {
-
         setHover(prop)
-
-
-
+    }
+    const formHndler=(e)=>{
+        e.preventDefault();
+        navigate(`/search/${searchInput}`)
     }
     return (
         <header className="header " >
@@ -33,7 +33,7 @@ export const Header = (props) => {
                 </div>
                 <div className="d-flex justify-content-center align-items-center " >
 
-                    <form className='header-search-form ' onSubmit={()=>{navigate(`/search/${searchInput}`)}}>
+                    <form className='header-search-form ' onSubmit={formHndler}>
                         <input className='header-search ' onChange={(e) => setSearchInput(e.target.value)} placeholder='Search...' type="text" />
                         <button className='header-search-button' type="submit"><img className='header-form-icon' src={search} alt="" /></button>
 
