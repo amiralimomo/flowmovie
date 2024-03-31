@@ -1,16 +1,18 @@
 import "./searchedpage.css";
-import { useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import { useSearch } from "../hooks/getSearchedmovieDataList";
 import { useEffect } from "react";
 import { Poster } from "../shared/poster";
 import { PaginationPage } from "../shared/pagination";
-import { data } from "autoprefixer";
+
 export const SearchedPage = () => {
     const { moviename } = useParams();
     const [movies, getMovies] = useSearch();
+
     useEffect(() => {
         getMovies(moviename)
-    }, [])
+    }, [moviename])
+ 
 
     return (
         <section className=" searched-body">

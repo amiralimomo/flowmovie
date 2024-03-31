@@ -1,3 +1,18 @@
 .pagitation{
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.pagitation>li{
+    padding: 1rem;
+}
+.selected{
+    background-color:#0F9ED1;
+}
+.next>a{
+    color: rgb(204, 204, 204);
+}
+.previous>a{
+    color: rgb(204, 204, 204);
 }

@@ -1,9 +1,9 @@
 
 import ReactPaginate from 'react-paginate';
+import "./pagination.css";
 export const PaginationPage = (props) => {
-
-const handlePageClick=()=>{
-    console.log("handel")
+const handlePageClick=(e)=>{
+    console.log("handel selected",e.selected)
 }
 
 
@@ -15,10 +15,12 @@ const handlePageClick=()=>{
                 breakLabel="..."
                 nextLabel="next >"
                 onPageChange={handlePageClick}
-                pageRangeDisplayed={5}
-                pageCount={6}
+                pageRangeDisplayed={3}
+                pageCount={props.pageCount}
                 previousLabel="< previous"
                 renderOnZeroPageCount={null}
+                initialPage={1}
+                className='pagitation'
             />
         </nav >
     )
