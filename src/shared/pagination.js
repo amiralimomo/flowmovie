@@ -3,7 +3,8 @@ import ReactPaginate from 'react-paginate';
 import "./pagination.css";
 export const PaginationPage = (props) => {
 const handlePageClick=(e)=>{
-    console.log("handel selected",e.selected)
+   
+    props.handleSelectedPage(e.selected)
 }
 
 
@@ -19,7 +20,7 @@ const handlePageClick=(e)=>{
                 pageCount={props.pageCount}
                 previousLabel="< previous"
                 renderOnZeroPageCount={null}
-                initialPage={1}
+                initialPage={0}
                 className='pagitation'
             />
         </nav >
