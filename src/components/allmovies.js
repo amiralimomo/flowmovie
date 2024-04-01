@@ -21,7 +21,7 @@ export const AllMovies = () => {
             <div className="container">
                 <h1 className="searched-title">All Movies</h1>
                 <div className="d-flex justify-content-start flex-wrap">
-                    {movies?.map((item) => { return (<Poster key={item.id} id={item.id} title={item.title} img={item.poster} year={item.year}  />) })}
+                    {movies.data?.map((item) => { return (<Poster key={item.id} id={item.id} title={item.title} img={item.poster} year={item.year}  />) })}
                 </div>
                 <PaginationPage pageCount={movies.metadata?.page_count} currentPage={movies.metadata?.current_page} handleSelectedPage={handleSelectedPage} />
             </div>

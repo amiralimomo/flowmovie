@@ -22,7 +22,7 @@ function App() {
       <Route path="/" element={<Home/>}/>
       <Route path="/movie" element={<MoviePage/>}/>
       <Route path="/search/:moviename" element={<SearchedPage/>}/>
-      {/* <Route path="/allmovies" element={<AllMovies/>}/> */}
+      <Route path="/allmovies" element={<AllMovies/>}/>
     </Routes>
     <Footer genre={genre}/>
    </Router>
