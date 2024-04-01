@@ -24,7 +24,7 @@ export const Header = (props) => {
                     <div><img className="header-logo" src={logo} alt="logo" /></div>
                     <ul className="d-flex justify-content-start align-items-stretch header-ul">
                         <li className="d-flex justify-content-center align-items-center header-li"><a className="d-flex justify-content-center align-items-center header-li header-a" onClick={() => { navigate("/") }}>Home</a> </li>
-                        <li className="d-flex justify-content-center align-items-center header-li"><span onMouseEnter={() => onHandleHover(true)} onMouseLeave={() => onHandleHover(false)} className="d-flex justify-content-center align-items-center header-li header-a" href="/">Movies      <div className={hover ? "d-block trans" : "d-none"} style={{}}>
+                        <li className="d-flex justify-content-center align-items-center header-li"><span onMouseEnter={() => onHandleHover(true)} onMouseLeave={() => onHandleHover(false)} className="d-flex justify-content-center align-items-center header-li header-a" ><a onClick={() => { navigate("/allmovies") }}> Movies</a>     <div className={hover ? "d-block trans" : "d-none"} style={{}}>
                             <Genre genre={props.genre} />
 
                         </div></span>  <i className="bi bi-chevron-down header-link-icon"></i></li>
@@ -34,7 +34,7 @@ export const Header = (props) => {
                 <div className="d-flex justify-content-center align-items-center " >
 
                     <form className='header-search-form ' onSubmit={formHndler}>
-                        <input className='header-search ' onChange={(e) => setSearchInput(e.target.value)} placeholder='Search...' type="text" />
+                        <input required className='header-search ' onChange={(e) => setSearchInput(e.target.value)} placeholder='Search...' type="text" />
                         <button className='header-search-button' type="submit"><img className='header-form-icon' src={search} alt="" /></button>
 
                     </form>

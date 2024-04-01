@@ -1,0 +1,10 @@
+.all-movies-body{
+    background-color: #131722;
+    min-height: 90vh;
+    color: white;
+    }
+    .all-movies-title{
+        padding-top: 20px;
+        font-size: 28px;
+        text-transform: capitalize;
+    }
