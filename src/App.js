@@ -8,6 +8,7 @@ import {useGenre}from "./hooks/getGenreDataList";
 import { MoviePage } from "./components/moviepage";
 import { SearchedPage } from "./components/searchedpage";
 import {AllMovies} from "./components/allmovies";
+import { GenresMovies } from "./components/genresmovies";
 function App() {
   const [genre, getGenre] = useGenre();
     useEffect(() => {
@@ -23,6 +24,7 @@ function App() {
       <Route path="/movie" element={<MoviePage/>}/>
       <Route path="/search/:moviename" element={<SearchedPage/>}/>
       <Route path="/allmovies" element={<AllMovies/>}/>
+      <Route path="/genre"  element={<GenresMovies genre={genre}/>}/>
     </Routes>
     <Footer genre={genre}/>
    </Router>
