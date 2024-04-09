@@ -94,9 +94,9 @@
 .menu-tag{
   display: none;
 }
-.menu-close-icon{
+/* .menu-close-icon{
 
-}
+} */
 @media only screen and (max-width: 600px) {
     .header{
         height: 75px;
