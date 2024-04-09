@@ -11,8 +11,7 @@ export const Genre = (props) => {
             </div>
             <ul className="d-flex flex-wrap">
 
-                {/* { props.genre.map((item)=>{return( <li  key={item.id} className="gener-li" ><a className={props.mod?"gener-a-light":"gener-a"} onClick={()=>{navigate("/genre",{state:{id:item.id}})}}>{item.name}</a></li>)})}
-                 */}
+              
                 {props.genre.map((item) => { return (<li key={item.id} className={props.actived==item.id?"gener-li actived-li":"gener-li"} ><a className={props.mod ? "gener-a-light" : "gener-a"} onClick={() => { navigate("/genre", { state: { id: item.id } }) }}>{item.name}</a></li>) })}
 
 

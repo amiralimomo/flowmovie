@@ -15,7 +15,7 @@ export const MoviePage = () => {
     const [movie, getMovie] = useMovie();
   
     useEffect(() => {
-
+        window.scrollTo(0, 0)
         getMovie(location.state.id);
 
     }, [])

@@ -1,0 +1,52 @@
+.menu{
+    position: fixed;
+    background-color: aliceblue;
+    width: 60vw;
+    height: 100vh;
+    left: -60vw;
+    /* left: 0; */
+    z-index: 300;
+    padding: 1rem;
+    transition:all .4s ease-in-out;
+}
+.menu-ul>li{
+    padding: .5rem;
+    border-bottom: .5px solid gray;
+}
+.menu-active{
+    left: 0!important;
+}
+.menu-close-icon{
+
+position: absolute;
+top: 10px;
+right: 20px;
+}
+.menu-close-icon-active{
+   
+    animation: rotate .7s normal;
+}
+.menu-close-icon-notactive{
+   
+    animation: moveto .7s normal;
+}
+.menu-link{
+display: block;
+    color: black;
+    cursor: pointer;
+    width: 100%;
+}
+@keyframes rotate {
+    0% {
+      
+      }
+    /* 60% { transform: rotate(1080deg);} */
+    100%{  transform: rotate(360deg);}
+  }
+
+  @keyframes moveto{
+    0%{
+        
+    }
+    100%{  transform: rotate(-360deg);}
+  }

@@ -8,6 +8,7 @@ import { useEffect } from "react";
 export const Home = () => {
     const [movies, imdbMovies, getList] = useList();
     useEffect(() => {
+        window.scrollTo(0, 0)
         getList();
     }, []);
 

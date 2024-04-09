@@ -7,6 +7,9 @@ export const AllMovies = () => {
     const  [movies, imdbMovie, getList]=useList();
     const [selectedPage, setSelectedPage] = useState(1);
     useEffect(() => { 
+       
+            window.scrollTo(0, 0);
+   
         getList(selectedPage);
     }
     , [selectedPage])

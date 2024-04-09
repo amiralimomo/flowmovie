@@ -9,13 +9,17 @@ export const GenresMovies = (props) => {
     const location = useLocation();
     const [movies, getMovies] = useGenreMovies();
     const [selectedPage, setSelectedPage] = useState(1);
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+   
+    },[])
     useEffect(() => {
-        // console.log(location.state.id)
-        getMovies(location.state.id, selectedPage)
+        window.scrollTo(0, 0);
+        getMovies(location.state.id, selectedPage);
     }, [location.state,selectedPage])
     const handleSelectedPage = (page) => {
         page = page + 1
-        // console.log(page)
+ 
         setSelectedPage(page)
 
     }
