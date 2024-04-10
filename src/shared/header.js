@@ -36,12 +36,12 @@ export const Header = (props) => {
                         </div>
                     </div>
                     <div><img className="header-logo" src={logo} alt="logo" /></div>
-                    <div className='header-ul'>
+                    <div className='header-ul h-100'>
 
                         <ul className="d-flex justify-content-start align-items-stretch h-100">
                             <li className="d-flex justify-content-center align-items-center header-li"><a className="d-flex justify-content-center align-items-center header-li header-a" onClick={() => { navigate("/") }}>Home</a> </li>
-                            <li className="d-flex justify-content-center align-items-center header-li">
-                                <span onMouseEnter={() => onHandleHover(true)} onMouseLeave={() => onHandleHover(false)} className="d-flex justify-content-center align-items-center header-li header-a" >
+                            <li onMouseEnter={() => onHandleHover(true)} className="d-flex justify-content-center align-items-center header-li">
+                                <span  onMouseLeave={() => onHandleHover(false)} className="d-flex justify-content-center align-items-center header-li header-a" >
                                     <a onClick={() => { navigate("/allmovies") }}> Movies</a>
                                     <div className={hover ? "d-block trans" : "d-none"} onClick={() => onHandleHover(false)}>
                                         <Genre genre={props.genre} />
