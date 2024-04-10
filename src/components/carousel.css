@@ -20,6 +20,7 @@ height: 80vh;
 position: absolute;
 top: 40%;
 left: 10%;
+right: 10%;
 color: white;
 }
 .slide-detail>div>span{
@@ -34,4 +35,17 @@ color: white;
     text-transform: capitalize;
 font-size: 60px;
 font-weight: 700;
+}
+
+@media only screen and (max-width: 600px) {
+    .slide-detail{
+      
+        top: 30%;
+       
+        }
+        .slide-title{
+
+        font-size: 50px;
+
+        }
 }

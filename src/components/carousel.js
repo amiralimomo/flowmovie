@@ -40,7 +40,7 @@ export const Carousel = () => {
                 <SwiperSlide>
                     <div className="slide" style={{ background: `url(${slide1})` }}>
                         <div className="slide-detail">
-                            <h3 className="slide-title">black Mirror</h3>
+                            <h3 className="slide-title">Have Fun</h3>
                             <div> <span>2017</span><span>|</span><span>comedy</span><span>|</span><span>1 hr 55 mins</span></div>
                             <ActiveButton name="Watch Now"/>
                             <PassiveButton name="+playlist"/>
@@ -50,7 +50,7 @@ export const Carousel = () => {
                     <div className="slide" style={{ background: `url(${slide2})` }}>
                         <div className="slide-detail">
                             <h3 className="slide-title">Black Mirror</h3>
-                            <div> <span>2017</span><span>|</span><span>comedy</span><span>|</span><span>1 hr 55 mins</span></div>
+                            <div> <span>2017</span><span>|</span><span>dram</span><span>|</span><span>1 hr 55 mins</span></div>
                             <ActiveButton name="Watch Now"/>
                             <PassiveButton name="+playlist"/>
                             </div></div>
@@ -59,7 +59,7 @@ export const Carousel = () => {
                     <div className="slide" style={{ background: `url(${slide3})` }}>
                         <div className="slide-detail">
                             <h3 className="slide-title">Black Mirror</h3>
-                            <div> <span>2017</span><span>|</span><span>comedy</span><span>|</span><span>1 hr 55 mins</span></div>
+                            <div> <span>2017</span><span>|</span><span>action</span><span>|</span><span>1 hr 55 mins</span></div>
                             <ActiveButton name="Watch Now"/>
                             <PassiveButton name="+playlist"/>
                             </div></div>
@@ -68,7 +68,7 @@ export const Carousel = () => {
                     <div className="slide" style={{ background: `url(${slide4})` }}>
                         <div className="slide-detail">
                             <h3 className="slide-title">Black Mirror</h3>
-                            <div> <span>2017</span><span>|</span><span>comedy</span><span>|</span><span>1 hr 55 mins</span></div>
+                            <div> <span>2017</span><span>|</span><span>horror</span><span>|</span><span>1 hr 55 mins</span></div>
                             <ActiveButton name="Watch Now"/>
                             <PassiveButton name="+playlist"/>
                             </div></div>
