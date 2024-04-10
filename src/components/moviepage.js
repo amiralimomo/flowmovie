@@ -23,11 +23,11 @@ export const MoviePage = () => {
     return (
         <section className="movie-page-body">
             <div className="container pt-5 pb-5">
-                <div className="d-flex justify-content-start">
+                <div className=" movie-page-element">
                     <div>
                         <img className="movie-poster-img" src={movie.poster} alt="" />
                     </div>
-                    <div className="movie ms-3">
+                    <div className="movie ">
                         {/* <h1>The Dark Knight</h1> */}
                         <h1>{movie.title}</h1>
                         <div className="movie-detail pt-2">

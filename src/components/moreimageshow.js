@@ -3,7 +3,7 @@ import { useToggle } from "../hooks/useshowimage";
 export const ImageSlider = (props) => {
     const [toggle, active, notActive] = useToggle();
     return (
-        <div className="d-flex justify-content-center">
+        <div className="d-flex flex-wrap justify-content-center">
             {props.images?.map((item, ind) => {
                 return (
                     <a onClick={() => { active() }} key={ind}>

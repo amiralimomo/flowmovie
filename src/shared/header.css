@@ -97,6 +97,11 @@
 /* .menu-close-icon{
 
 } */
+.trans{
+  top: 52px!important;
+  left: -300px;
+ 
+}
 @media only screen and (max-width: 600px) {
     .header{
         height: 75px;
