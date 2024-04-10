@@ -24,3 +24,18 @@
     padding-left: 5px;
     font-size: 14px;
 }
+@media only screen and (max-width: 600px) {
+    .footer-logo{
+        width: 120px;
+      height: 56px;
+    }
+    .link-intop-footer{
+       text-align: center;
+       padding: 0px;
+       margin-right: 0px;
+    }
+    .link-intop-footer>span{
+      
+        font-size: 10px;
+    }
+}
