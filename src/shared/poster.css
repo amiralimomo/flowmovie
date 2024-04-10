@@ -383,3 +383,42 @@
   /* Non-prefixed version, currently
                                       supported by Chrome, Edge, Opera and Firefox */
 }
+@media only screen and (max-width: 600px) {
+.c-container{
+  width: 145px;
+  height: 217px;
+}
+#prompt{
+  font-size: 17px;
+
+  right: 10px;
+  left: 10px;
+}
+}
+/* .c-container {
+  margin: 45px 10px;
+  position: relative;
+  width: 180px;
+  height: 254px;
+  transition: 200ms;
+} */
+
+
+/* #prompt {
+  bottom: 8px;
+  left: 12px;
+  z-index: 20;
+  font-size: 20px;
+  transition: 300ms ease-in-out-out;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px black;
+  text-transform: capitalize;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  max-width: 167px;
+  display: block;
+  height: 32px;
+  white-space: nowrap;
+  overflow: hidden;
+} */
