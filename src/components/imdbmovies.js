@@ -8,8 +8,8 @@ export const ImdbMovies = (props) => {
         <div className="imdb-body ">
             <div className="container">
                 <div className="imdb-detail">
-                    <h2>Vikings</h2>
-                    <span>New Season 5 just flow in. Watch and Debate</span>
+                    <h2>IMDb</h2>
+                    <span>The highest imdb rating among movies</span>
                 </div>
                 <div className="d-flex justify-content-center flex-wrap">
                    

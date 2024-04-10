@@ -1,6 +1,7 @@
 .imdb-body{
     background-image: url("../images/wide.jpg");
-    height: 665px;
+ height: fit-content;
+ background-position: center;
 }
 .imdb-detail{
     color: white;
@@ -17,4 +18,9 @@
     font-size: 30px;
     max-width: 390px;
     margin: 0 auto;
+}
+@media only screen and (max-width: 600px) {
+    .imdb-body{
+        padding-bottom: 40px;
+    }
 }
