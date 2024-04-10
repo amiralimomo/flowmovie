@@ -32,10 +32,10 @@
   transition: 200ms;
 }
 
-.c-container:active {
+/* .c-container:active {
   width: 170px;
   height: 245px;
-}
+} */
 
 #card {
   position: absolute;

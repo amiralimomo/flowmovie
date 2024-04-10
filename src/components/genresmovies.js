@@ -28,7 +28,7 @@ export const GenresMovies = (props) => {
             <div className="container">
             
                 <Genre mod={true} genre={props.genre} actived={location.state.id}/>
-                <div className="d-flex justify-content-start flex-wrap">
+                <div className="d-flex justify-content-center flex-wrap">
                     {movies.data?.map((item) => { return (<Poster key={item.id} id={item.id} title={item.title} img={item.poster} year={item.year} />) })}
                 </div>
                 <PaginationPage pageCount={movies.metadata?.page_count} currentPage={movies.metadata?.current_page} handleSelectedPage={handleSelectedPage} />

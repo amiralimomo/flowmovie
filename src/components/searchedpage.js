@@ -31,7 +31,7 @@ export const SearchedPage = () => {
             <div className="container">
 
                 <h1 className="searched-title">resoult of : {moviename}</h1>
-                <div className="d-flex justify-content-start flex-wrap">
+                <div className="d-flex justify-content-center flex-wrap">
                     {movies.data?.map((item) => { return (<Poster key={item.id} id={item.id} title={item.title} img={item.poster} year={item.year}  />) })}
                 </div>
                 <PaginationPage pageCount={movies.metadata?.page_count} currentPage={movies.metadata?.current_page} handleSelectedPage={handleSelectedPage} />

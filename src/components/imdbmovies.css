@@ -1,7 +1,7 @@
 .imdb-body{
     background-image: url("../images/wide.jpg");
  height: fit-content;
- background-position: center;
+ background-position: top;
 }
 .imdb-detail{
     color: white;
@@ -23,4 +23,19 @@
     .imdb-body{
         padding-bottom: 40px;
     }
+    .imdb-detail{
+    
+        padding: 30px;
+        padding-bottom: 0px;
+ 
+    }
+    .imdb-detail>h2{
+        font-size: 40px;
+    
+     }
+     .imdb-detail>span{
+   
+         font-size: 20px;
+     
+     }
 }

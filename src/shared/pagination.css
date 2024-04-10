@@ -15,4 +15,24 @@
 }
 .previous>a{
     color: rgb(204, 204, 204);
+
+}
+@media only screen and (max-width: 600px) {
+    .pagitation>li{
+        padding: .5rem;
+        font-size: 11px;
+    }
+    .previous>a{
+       font-size: 10px;
+    }
+    .next>a{
+        font-size: 10px;
+    }
+    .pagitation>ul{
+        overflow: hidden;
+    }
+    .pagitation{
+        padding: 20px 0px;
+        width: 100%;
+    }
 }

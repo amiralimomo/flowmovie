@@ -11,7 +11,7 @@ const handlePageClick=(e)=>{
     return (
 
 
-        < nav className="pagitation pt-4 pb-4 " >
+        < nav className="pagitation pt-4 pb-4 w-100" >
             <ReactPaginate
                 breakLabel="..."
                 nextLabel="next >"
