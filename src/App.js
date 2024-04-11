@@ -9,7 +9,9 @@ import { MoviePage } from "./components/moviepage";
 import { SearchedPage } from "./components/searchedpage";
 import {AllMovies} from "./components/allmovies";
 import { GenresMovies } from "./components/genresmovies";
+import {QueryClient,QueryClientProvider} from "react-query";
 function App() {
+  const client=new QueryClient()
   const [genre, getGenre] = useGenre();
     useEffect(() => {
 
@@ -17,6 +19,8 @@ function App() {
     }, [])
   return (
   <React.Fragment>
+    <QueryClientProvider client={client}>
+
    <Router>
     <Header genre={genre}/>
     <Routes>
@@ -28,6 +32,7 @@ function App() {
     </Routes>
     <Footer genre={genre}/>
    </Router>
+    </QueryClientProvider>
   </React.Fragment>
   );
 }
