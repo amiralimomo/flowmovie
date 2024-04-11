@@ -12,7 +12,7 @@ export const TopRatedMovies = (props) => {
                     <h2 className="top-rated-title">Popular Movies to Watch Now</h2>
                     <span className="top-rates-discription">Most watched movies by days</span>
                 </div>
-                {props.list.data?.map((item)=>{return (<Poster key={item.id} id={item.id} title={item.title} img={item.poster} year={item.year} genre={item.genres[0]}/>)})}
+                {props.data?.list.data?.map((item)=>{return (<Poster key={item.id} id={item.id} title={item.title} img={item.poster} year={item.year} genre={item.genres[0]}/>)})}
                 
            
               

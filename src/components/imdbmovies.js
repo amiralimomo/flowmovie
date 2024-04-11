@@ -13,7 +13,7 @@ export const ImdbMovies = (props) => {
                 </div>
                 <div className="d-flex justify-content-center flex-wrap">
                    
-                    {props.list.map((item)=>{return (<Poster key={item.id}  id={item.id} title={item.title} img={item.poster} year={item.year} genre={item.genres[0]}/>)})}
+                    {props.list?.map((item)=>{return (<Poster key={item.id}  id={item.id} title={item.title} img={item.poster} year={item.year} genre={item.genres[0]}/>)})}
                 </div>
             </div>
         </div>
