@@ -4,7 +4,7 @@ import { TopRatedMovies } from "./topratedmovies";
 import { ImdbMovies } from './imdbmovies';
 import { useList } from "../hooks/getMoviesDataList";
 import { useEffect } from "react";
-
+// import { Loading } from "../shared/loading";
 export const Home = () => {
     const [movies, imdbMovies, getList] = useList();
     useEffect(() => {
@@ -15,6 +15,7 @@ export const Home = () => {
 
     return (
         <section>
+{/* <Loading/> */}
             <Carousel />
             <TopRatedMovies list={movies} />
             <ImdbMovies list={imdbMovies} />
