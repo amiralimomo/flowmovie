@@ -1,13 +1,12 @@
 import Axios from "axios";
-import { useState } from "react";
+import { useMutation } from "react-query";
 export const useGenreMovies = () => {
-    const [movies, setMovies] = useState([]);
-    const url = "https://moviesapi.ir/api/v1/genres/"
-   const middleUrl="/movies?page="
-    const getMovies = (id,selectedPage=1) => {
-        Axios.get(url + id+middleUrl+selectedPage).then((res) => setMovies(res.data));
+    const middleUrl = "/movies?page="
 
-   
-    }
-    return [movies, getMovies]
+    const url = "https://moviesapi.ir/api/v1/genres/"
+    const generMovieMoutation = useMutation((id, selectedPage = 1) => {
+        return Axios.get(url + id + middleUrl + selectedPage).then((res) => res.data);
+    })
+
+    return [generMovieMoutation]
 }

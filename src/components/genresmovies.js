@@ -5,17 +5,18 @@ import { useGenreMovies } from "../hooks/getGenreMoviesDataList";
 import { Poster } from "../shared/poster";
 import { PaginationPage } from "../shared/pagination";
 import { Genre } from "../shared/genre";
+import { Loading } from "../shared/loading";
 export const GenresMovies = (props) => {
     const location = useLocation();
-    const [movies, getMovies] = useGenreMovies();
+    const [generMovieMoutation] = useGenreMovies();
     const [selectedPage, setSelectedPage] = useState(1);
     useEffect(()=>{
         window.scrollTo(0, 0);
-   
+        generMovieMoutation.mutate(location.state.id, selectedPage);
     },[])
     useEffect(() => {
         window.scrollTo(0, 0);
-        getMovies(location.state.id, selectedPage);
+        generMovieMoutation.mutate(location.state.id, selectedPage);
     }, [location.state,selectedPage])
     const handleSelectedPage = (page) => {
         page = page + 1
@@ -25,13 +26,14 @@ export const GenresMovies = (props) => {
     }
     return (
         <section className="all-movies-body">
+            {generMovieMoutation.isLoading && <Loading/>}
             <div className="container">
             
                 <Genre mod={true} genre={props.genre} actived={location.state.id}/>
                 <div className="d-flex justify-content-center flex-wrap">
-                    {movies.data?.map((item) => { return (<Poster key={item.id} id={item.id} title={item.title} img={item.poster} year={item.year} />) })}
+                    {generMovieMoutation.data?.data.map((item) => { return (<Poster key={item.id} id={item.id} title={item.title} img={item.poster} year={item.year} />) })}
                 </div>
-                <PaginationPage pageCount={movies.metadata?.page_count} currentPage={movies.metadata?.current_page} handleSelectedPage={handleSelectedPage} />
+                <PaginationPage pageCount={generMovieMoutation.data?.metadata.page_count} currentPage={generMovieMoutation.data?.metadata.current_page} handleSelectedPage={handleSelectedPage} />
             </div>
         </section>
     )

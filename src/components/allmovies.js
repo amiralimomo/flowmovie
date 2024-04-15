@@ -4,18 +4,19 @@ import { useEffect,useState } from "react";
 import {  PaginationPage} from "../shared/pagination";
 import { Poster } from "../shared/poster";
 export const AllMovies = () => {
-    const  [movies, imdbMovie, getList]=useList();
+    const  [homeMutation]=useList();
     const [selectedPage, setSelectedPage] = useState(1);
-    useEffect(() => { 
-       
+    useEffect(()=>{
+        homeMutation.mutate(selectedPage);
+    },[])
+    useEffect(() => {   
             window.scrollTo(0, 0);
-   
-        getList(selectedPage);
-    }
-    , [selectedPage])
+            homeMutation.mutate(selectedPage);
+    }, [selectedPage])
+
     const handleSelectedPage = (page) => {
         page = page + 1
-        console.log(page)
+      
         setSelectedPage(page)
 
     }
@@ -24,9 +25,9 @@ export const AllMovies = () => {
             <div className="container">
                 <h1 className="searched-title">All Movies</h1>
                 <div className="d-flex justify-content-start flex-wrap">
-                    {movies.data?.map((item) => { return (<Poster key={item.id} id={item.id} title={item.title} img={item.poster} year={item.year}  />) })}
+                    {homeMutation?.data?.data?.data?.map((item) => { return (<Poster key={item.id} id={item.id} title={item.title} img={item.poster} year={item.year}  />) })}
                 </div>
-                <PaginationPage pageCount={movies.metadata?.page_count} currentPage={movies.metadata?.current_page} handleSelectedPage={handleSelectedPage} />
+                <PaginationPage pageCount={homeMutation.data?.data?.metadata?.page_count} currentPage={homeMutation?.data?.data.metadata?.current_page} handleSelectedPage={handleSelectedPage} />
             </div>
         </section>
     )

@@ -7,22 +7,22 @@ import { useEffect } from "react";
 import { Loading } from "../shared/loading";
 // import { Loading } from "../shared/loading";
 export const Home = () => {
-    const [homeMutation, isLoading, isError, error] = useList();
+    const [homeMutation] = useList();
     useEffect(() => {
         window.scrollTo(0, 0)
-        // getList();
+       homeMutation.mutate()
     }, []);
 
 
     return (
         <section>
          
-            {isLoading && <Loading />}
-            {isError && <Loading />}
+            {homeMutation.isLoading && <Loading />}
+            {homeMutation.isError && <Loading />}
         
             <Carousel />
-            <TopRatedMovies list={homeMutation?.data} />
-            <ImdbMovies list={homeMutation?.imdb} />
+            <TopRatedMovies list={homeMutation?.data?.data} />
+            <ImdbMovies list={homeMutation?.data?.imdb} />
         </section>
     )
 }
