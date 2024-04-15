@@ -4,8 +4,9 @@ export const useGenreMovies = () => {
     const middleUrl = "/movies?page="
 
     const url = "https://moviesapi.ir/api/v1/genres/"
-    const generMovieMoutation = useMutation((id, selectedPage = 1) => {
-        return Axios.get(url + id + middleUrl + selectedPage).then((res) => res.data);
+    const generMovieMoutation = useMutation(( query ) => {
+       
+        return Axios.get(url + query.id+  middleUrl + query.page).then((res) => res.data);
     })
 
     return [generMovieMoutation]

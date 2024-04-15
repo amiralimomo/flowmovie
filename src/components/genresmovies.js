@@ -12,12 +12,16 @@ export const GenresMovies = (props) => {
     const [selectedPage, setSelectedPage] = useState(1);
     useEffect(()=>{
         window.scrollTo(0, 0);
-        generMovieMoutation.mutate(location.state.id, selectedPage);
+         generMovieMoutation.mutate({id:location.state.id,page:selectedPage});
     },[])
+
     useEffect(() => {
         window.scrollTo(0, 0);
-        generMovieMoutation.mutate(location.state.id, selectedPage);
+    
+        generMovieMoutation.mutate({id:location.state.id,page:selectedPage});
     }, [location.state,selectedPage])
+
+
     const handleSelectedPage = (page) => {
         page = page + 1
  
