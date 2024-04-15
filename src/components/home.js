@@ -18,6 +18,7 @@ export const Home = () => {
         <section>
          
             {isLoading && <Loading />}
+            {isError && <Loading />}
         
             <Carousel />
             <TopRatedMovies list={homeMutation?.data} />
